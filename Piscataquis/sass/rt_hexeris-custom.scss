@@ -1,0 +1,159 @@
+/*!
+ * Theme Name: Piscataquis, customization of rt_hexerix
+ *  place into rt_hexeris/css/rt_hexeris-custom.css on server 
+ *
+ * Author: Linda Speight - Ellsworth American Online Services
+ 
+ */
+ 
+/* Import Statements ----------------------------------- */
+@import "partials/settings";
+@import "partials/functions";
+@import "partials/styles";
+
+ /* hide elements we're not using */
+ .rt-topbar, 
+ span.social-button,
+ .sprocket-mosaic-header {
+ 	@extend .EAhide;
+
+ }
+/********* Header **********/
+
+// Main Menu 
+#rt-utility {
+	//@media (min-width: 768px) {
+		/*.menu-block {
+			width: 100%;
+			text-align: center;
+
+			ul.gf-menu {
+				width:100%;
+				margin-left: auto;
+				margin-right: auto;
+			} 
+			//margin-right: 20px; // add spacing s.t. contact submenu dont get cut off.
+		}*/
+	//}
+}
+#rt-breadcrumbs {
+	a:after { // using breadcrumbs area for menu remove the after
+		content: "";
+		margin: 0px 0px;
+		.gf-menu.l1 > li > .item {
+
+		}
+	} 
+	.gf-menu {
+		background-color: $piscatGreen; // although, the overlay changes the color
+	}
+
+}
+/********* End Header *********/
+ /****** Main Stuff - including sidebars ***********/
+#rt-sidebar-a {
+	ul.nav.menu li a:hover {
+		color: $piscatLSBMenuHover;
+		font-weight: bold;
+		text-shadow: 1px 1px 0 $piscatGreen; //rgba(255,255,255,0.3);
+	}
+	.search form #mod-search-searchword { // width of search box 
+		//width: 180px;
+	}
+}
+#rt-sidebar-b {
+	.banneritem { // center banners in sidebar
+		text-align: center;
+
+	}
+}
+#rt-main {
+	padding-top: 0px;
+	margin-top: 0px;
+	.rt-container .rt-grid-6 .rt-block { // trying to get padding off top of mainbody
+		margin-top: 0px!important;
+		padding-top: 0px!important;
+	}
+}
+
+#rt-mainbody {
+	padding-top: 0px!important;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	a { 
+		color: $piscatLinkGreen;
+		font-weight: bold;
+	}
+	div.component-content section.blog article, 
+	div.component-content section.blog-featured article {
+
+		margin-bottom: 0px;
+	}
+	div.component-content section.blog, div.component-content section.blog-featured {
+		
+		.items-row article.item h2 a {
+			font-size: 25px;
+		}
+		.row-separator { // tighten up the catagory blogs.
+			margin: 0px;
+			height: 0px;
+		}
+		.items-row:not(:last-child) { // draw line between em, but not on last
+			 .row-separator {
+				background-color: $piscatGreen;
+			}
+		}
+		.subheading-category { // trying to avoid double titles in category blogs 
+			// dont like this option, but not sure what else to do.  hexeris already overides joomla template.
+			display: none;
+			visibility: hidden;
+		}
+	}
+	section.category-list > h2, 
+	section.blog > h1, 
+	.contact .page-header h2 .contact-name, 
+	.contact .page-header h2, 
+	.contact .page-header,
+	.contact-category h2 {
+		color: $piscatLinkGreen;
+		font-size: 28px;
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	ul.actions{
+		margin-top: -40px;
+	}
+	td {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.readmore a {
+		background-color: $piscatGreen!important;
+	}
+	.contact {
+		dl.contact-position dd {
+			font-weight: bold;
+			font-size: 20px;
+		}
+	}
+	.search {
+		.search-results {
+			.result-category {
+				display: none;
+				visibility: hidden;
+				height: 0px;
+				margin: 0px;
+				padding: 0px;
+			}
+		}
+	}
+	
+}	
+/**** end of #rt-mainbody ****/
+
+#rt-copyright {
+	background-color: $piscatGreen;
+	.rt-block.ea-copyright {
+		float: right;
+	}
+}

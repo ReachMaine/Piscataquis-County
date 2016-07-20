@@ -1,0 +1,32 @@
+/* styles.scss - Style css for EA sites
+ * 
+ * Author: LSpeight
+ */
+ .item-page h2 {
+ 	color: $piscatLinkGreen!important;
+ }
+ .EAhide {
+	height: 0px!important;
+ 	visibility: hidden;
+ 	display: none;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+
+ .EAplainList { // plaing list
+ 	list-style-type: none;
+ 	list-style-position: inside;
+ }
+
+ div.rt-block.EAalert {
+ 	border: 1px red solid;
+  	p {
+ 		margin-bottom: 0px;
+ 	}
+ }
+ ol li, ul li {
+ 	padding-bottom: 5px;
+ }
+ ol ol {
+ 	list-style-type: lower-alpha;
+ }
