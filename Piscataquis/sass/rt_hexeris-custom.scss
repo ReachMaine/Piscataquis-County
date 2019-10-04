@@ -1,18 +1,18 @@
 /*!
  * Theme Name: Piscataquis, customization of rt_hexerix
- *  place into rt_hexeris/css/rt_hexeris-custom.css on server 
+ *  place into rt_hexeris/css/rt_hexeris-custom.css on server
  *
  * Author: Linda Speight - Ellsworth American Online Services
- 
+
  */
- 
+
 /* Import Statements ----------------------------------- */
 @import "partials/settings";
 @import "partials/functions";
 @import "partials/styles";
 
  /* hide elements we're not using */
- .rt-topbar, 
+ .rt-topbar,
  span.social-button,
  .sprocket-mosaic-header {
  	@extend .EAhide;
@@ -20,7 +20,7 @@
  }
 /********* Header **********/
 
-// Main Menu 
+// Main Menu
 #rt-utility {
 	//@media (min-width: 768px) {
 		/*.menu-block {
@@ -31,7 +31,7 @@
 				width:100%;
 				margin-left: auto;
 				margin-right: auto;
-			} 
+			}
 			//margin-right: 20px; // add spacing s.t. contact submenu dont get cut off.
 		}*/
 	//}
@@ -43,7 +43,7 @@
 		.gf-menu.l1 > li > .item {
 
 		}
-	} 
+	}
 	.gf-menu {
 		background-color: $piscatGreen; // although, the overlay changes the color
 	}
@@ -57,7 +57,7 @@
 		font-weight: bold;
 		text-shadow: 1px 1px 0 $piscatGreen; //rgba(255,255,255,0.3);
 	}
-	.search form #mod-search-searchword { // width of search box 
+	.search form #mod-search-searchword { // width of search box
 		//width: 180px;
 	}
 }
@@ -80,17 +80,17 @@
 	padding-top: 0px!important;
 	box-shadow: none;
 	-webkit-box-shadow: none;
-	a { 
+	a {
 		color: $piscatLinkGreen;
 		font-weight: bold;
 	}
-	div.component-content section.blog article, 
+	div.component-content section.blog article,
 	div.component-content section.blog-featured article {
 
 		margin-bottom: 0px;
 	}
 	div.component-content section.blog, div.component-content section.blog-featured {
-		
+
 		.items-row article.item h2 a {
 			font-size: 25px;
 		}
@@ -103,16 +103,16 @@
 				background-color: $piscatGreen;
 			}
 		}
-		.subheading-category { // trying to avoid double titles in category blogs 
+		.subheading-category { // trying to avoid double titles in category blogs
 			// dont like this option, but not sure what else to do.  hexeris already overides joomla template.
 			display: none;
 			visibility: hidden;
 		}
 	}
-	section.category-list > h2, 
-	section.blog > h1, 
-	.contact .page-header h2 .contact-name, 
-	.contact .page-header h2, 
+	section.category-list > h2,
+	section.blog > h1,
+	.contact .page-header h2 .contact-name,
+	.contact .page-header h2,
 	.contact .page-header,
 	.contact-category h2 {
 		color: $piscatLinkGreen;
@@ -131,10 +131,15 @@
 		background-color: $piscatGreen!important;
 	}
 	.contact {
-		dl.contact-position dd {
-			font-weight: bold;
-			font-size: 20px;
-		}
+		dl.contact-position {
+      dd {
+  			font-weight: bold;
+  			font-size: 20px;
+  		}
+      dt {
+        display: none;
+      }
+    }
 	}
 	.search {
 		.search-results {
@@ -147,8 +152,8 @@
 			}
 		}
 	}
-	
-}	
+
+}
 /**** end of #rt-mainbody ****/
 
 #rt-copyright {
